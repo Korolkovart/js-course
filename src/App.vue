@@ -2,6 +2,7 @@
   <div id="app">
     <h1>eShop</h1>
     <Header />
+
     
     <main>
       <GoodsList
@@ -54,4 +55,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

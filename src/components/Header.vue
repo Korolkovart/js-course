@@ -1,4 +1,5 @@
 <template>
+    <div>
      <header class="header-main">
         <div class="logo">
           <svg  class="logo-svg"
@@ -25,11 +26,30 @@
       <button class="cart-button" type="button"> Корзина</button>    
       </div>
     </header>
+       <div class="basket" v-bind:class="moveCart">
+           <Basket />
+       </div>
+     </div>
 </template>
 
 <script>
+import Basket from '@/components/Basket.vue'
 export default {
-    
+
+        data: {
+            isVisible: false
+        },
+        computed: {
+            moveCart(){
+            return {
+                isVisible: !this.isVisible,
+              '': this.isVisible
+            }
+        }}
+        ,
+    components: {
+        Basket
+    }
 }
 </script>
 
@@ -106,6 +126,16 @@ export default {
     }
     .isVisible{
         visibility: hidden;
+    }
+    .basket{
+        width: 60%;
+        height: 300px;
+        background-color: rgb(237, 235, 235);
+        border: 1px solid black;
+        position: relative;
+        z-index: 99;
+        top: 350px;
+        margin: 0 auto;
     }
     .basket-item{
         width: 94%;

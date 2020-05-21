@@ -1,12 +1,11 @@
 <template>
-    <div class="basket" >
         <div class="basket-item" >
-          <h2 class="title-basket-item">{{goods.product_name}}</h2>
-          <span class="price-basket-item">{{goods.price.toLocaleString()}} ₽</span>
+          <h2 class="title-basket-item">name</h2>
+          <span class="price-basket-item"> price ₽</span>
           <span class="quantity-basket-item"></span>
           <button class="cart-button" type="button" >Удалить</button>
           </div>
-      </div>
+
 </template>
 
 <script>
@@ -16,16 +15,6 @@ export default {
 </script>
 
 <style>
-    .basket{
-        max-width: 800px;
-        height: 300px;
-        background-color: rgb(237, 235, 235);
-        border: 1px solid black;
-        position: relative;
-        z-index: 99;
-        top: 350px;
-        margin: 0 auto;
-    }
     .basket-item{
         width: 94%;
         margin: 10px auto;
