@@ -23,10 +23,10 @@
       </form>
       <div class="price-button">
           <span class="total-price"> </span> 
-      <button class="cart-button" type="button"> Корзина</button>    
+      <button class="cart-button" type="button" @click="isVisible = !isVisible" > Корзина</button>    
       </div>
     </header>
-       <div class="basket" v-bind:class="moveCart">
+       <div class="basket" :class="moveCart">
            <Basket />
        </div>
      </div>
@@ -35,9 +35,10 @@
 <script>
 import Basket from '@/components/Basket.vue'
 export default {
-
-        data: {
-            isVisible: false
+        data() {
+            return{
+                isVisible: false
+            }
         },
         computed: {
             moveCart(){
